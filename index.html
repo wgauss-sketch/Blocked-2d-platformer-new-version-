@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skybound</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <canvas id="game" width="960" height="540" aria-label="Skybound platform game"></canvas>
+
+      <section id="startScreen" class="overlay">
+        <div class="panel">
+          <p class="eyebrow">A tiny adventure</p>
+          <h1>SKYBOUND</h1>
+          <p>Collect every star. Reach the portal. Don't fall.</p>
+          <button id="startButton" class="primary">Play Game</button>
+          <div class="character-heading">Choose Character</div>
+          <div id="characterSelect" class="character-select" aria-label="Choose a character">
+            <button class="character-option active" data-character="0" aria-label="Choose Nova">
+              <span class="character-preview nova"></span>
+              <strong>Nova</strong>
+            </button>
+            <button class="character-option" data-character="1" aria-label="Choose Moss">
+              <span class="character-preview moss"></span>
+              <strong>Moss</strong>
+            </button>
+            <button class="character-option" data-character="2" aria-label="Choose Bolt">
+              <span class="character-preview bolt"></span>
+              <strong>Bolt</strong>
+            </button>
+          </div>
+          <div class="level-heading">Choose Level</div>
+          <div id="levelSelect" class="level-select" aria-label="Choose a level">
+            <button data-level="0">1</button>
+            <button data-level="1">2</button>
+            <button data-level="2">3</button>
+          </div>
+        </div>
+      </section>
+
+      <div id="mobileControls" class="mobile-controls" aria-label="Mobile controls">
+        <div class="move-controls">
+          <button id="leftButton" aria-label="Move left">&#9664;</button>
+          <button id="rightButton" aria-label="Move right">&#9654;</button>
+        </div>
+        <button id="jumpButton" class="jump" aria-label="Jump">Jump</button>
+      </div>
+    </main>
+    <script src="game.js"></script>
+  </body>
+</html>
